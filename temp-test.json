@@ -1,0 +1,110 @@
+{
+  "DBInstances": [
+    {
+      "DBInstanceIdentifier": "itkon-school",
+      "DBInstanceClass": "db.t2.micro",
+      "Engine": "mysql",
+      "DBInstanceStatus": "available",
+      "MasterUsername": "admin",
+      "Endpoint": {
+        "Address": "itkon-school.cxrgfavfa7h0.eu-central-1.rds.amazonaws.com",
+        "Port": 3306,
+        "HostedZoneId": "Z1RLNUO7B9Q6NB"
+      },
+      "AllocatedStorage": 20,
+      "InstanceCreateTime": "2023-11-18T19:45:22.901000+00:00",
+      "PreferredBackupWindow": "03:29-03:59",
+      "BackupRetentionPeriod": 0,
+      "DBSecurityGroups": [],
+      "VpcSecurityGroups": [
+        {
+          "VpcSecurityGroupId": "sg-0f0a0375eb0bbaf37",
+          "Status": "active"
+        },
+        {
+          "VpcSecurityGroupId": "sg-04d868d3f81ca857a",
+          "Status": "active"
+        }
+      ],
+      "DBParameterGroups": [
+        {
+          "DBParameterGroupName": "default.mysql8.0",
+          "ParameterApplyStatus": "in-sync"
+        }
+      ],
+      "AvailabilityZone": "eu-central-1b",
+      "DBSubnetGroup": {
+        "DBSubnetGroupName": "default-vpc-029445225dba49e30",
+        "DBSubnetGroupDescription": "Created from the RDS Management Console",
+        "VpcId": "vpc-029445225dba49e30",
+        "SubnetGroupStatus": "Complete",
+        "Subnets": [
+          {
+            "SubnetIdentifier": "subnet-0564d2f5b1d40a209",
+            "SubnetAvailabilityZone": {
+              "Name": "eu-central-1c"
+            },
+            "SubnetOutpost": {},
+            "SubnetStatus": "Active"
+          },
+          {
+            "SubnetIdentifier": "subnet-07be8dc6b44b29bdc",
+            "SubnetAvailabilityZone": {
+              "Name": "eu-central-1a"
+            },
+            "SubnetOutpost": {},
+            "SubnetStatus": "Active"
+          },
+          {
+            "SubnetIdentifier": "subnet-03992b0567812b4c1",
+            "SubnetAvailabilityZone": {
+              "Name": "eu-central-1b"
+            },
+            "SubnetOutpost": {},
+            "SubnetStatus": "Active"
+          }
+        ]
+      },
+      "PreferredMaintenanceWindow": "mon:01:39-mon:02:09",
+      "PendingModifiedValues": {},
+      "MultiAZ": false,
+      "EngineVersion": "8.0.33",
+      "AutoMinorVersionUpgrade": true,
+      "ReadReplicaDBInstanceIdentifiers": [],
+      "LicenseModel": "general-public-license",
+      "OptionGroupMemberships": [
+        {
+          "OptionGroupName": "default:mysql-8-0",
+          "Status": "in-sync"
+        }
+      ],
+      "PubliclyAccessible": true,
+      "StorageType": "gp2",
+      "DbInstancePort": 0,
+      "StorageEncrypted": false,
+      "DbiResourceId": "db-ZU7MLTJD2HSHMBPBQB5GIR6LWA",
+      "CACertificateIdentifier": "rds-ca-2019",
+      "DomainMemberships": [],
+      "CopyTagsToSnapshot": true,
+      "MonitoringInterval": 0,
+      "DBInstanceArn": "arn:aws:rds:eu-central-1:921617182070:db:itkon-school",
+      "IAMDatabaseAuthenticationEnabled": false,
+      "PerformanceInsightsEnabled": false,
+      "DeletionProtection": false,
+      "AssociatedRoles": [],
+      "MaxAllocatedStorage": 1000,
+      "TagList": [],
+      "CustomerOwnedIpEnabled": false,
+      "ActivityStreamStatus": "stopped",
+      "BackupTarget": "region",
+      "NetworkType": "IPV4",
+      "StorageThroughput": 0,
+      "CertificateDetails": {
+        "CAIdentifier": "rds-ca-2019",
+        "ValidTill": "2024-08-22T17:08:50+00:00"
+      },
+      "DedicatedLogVolume": false,
+      "IsStorageConfigUpgradeAvailable": false
+    }
+  ]
+}

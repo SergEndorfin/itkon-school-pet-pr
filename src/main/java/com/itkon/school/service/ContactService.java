@@ -5,11 +5,13 @@ import com.itkon.school.model.Contact;
 import com.itkon.school.repository.ContactRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 @Slf4j
@@ -43,7 +45,14 @@ public class ContactService {
                 isUpdated.set(true);
             }
         });
-
         return isUpdated.get();
     }
+
+    public Page<Contact> findMsgsWithOpenStatus(int pageNum, String sortField, String sortDirection) {
+        Sort sort = Sort.by(sortField);
+        sort = sortDirection.equals("asc") ? sort.ascending() : sort.descending();
+        Pageable pageRequest = PageRequest.of(pageNum - 1, 5, sort);
+        return contactRepository.findByStatus(ITKonContacts.OPEN, pageRequest);
+    }
+
 }

@@ -8,8 +8,8 @@ import com.itkon.school.repository.ItClassRepository;
 import com.itkon.school.repository.PersonRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -101,7 +101,8 @@ public class AdminController {
 
     @GetMapping("displayCourses")
     public ModelAndView displayCourses() {
-        List<Courses> courses = coursesRepository.findAll();
+//        List<Courses> courses = coursesRepository.findByOrderByNameDesc(); // static sorting here
+        List<Courses> courses = coursesRepository.findAll(Sort.by("name").ascending());// dynamic sorting here
         ModelAndView modelAndView = new ModelAndView("courses_secure");
         modelAndView.addObject("courses", courses);
         modelAndView.addObject("course", new Courses());
